@@ -6,18 +6,27 @@
 
 
 class Figure;
+// класс стакана
 class Glass : public QWidget
 {
     Q_OBJECT
 
     const int W = 20;
+    // интервал
     int m_timerinterval;
+    // кол-во строк
     int m_rows;
+    // кол-во столбцов
     int m_columns;
+    // флаг игры
     bool gameOn = false;
+    // счет
     int m_score;
+    // матрица стакана
     QVector <QVector<QColor>> m_glassArray;
+    // текущая фигура
     Figure *cur;
+    // следующая фигура
     Figure *next;
     int id_tm;
 
@@ -26,8 +35,6 @@ class Glass : public QWidget
 
 public:
     explicit Glass(QWidget *parent = nullptr);
-
-
     void clearGlass();
     void glassInt();
     int rows() const;
@@ -35,12 +42,14 @@ public:
     int columns() const;
     void setColumns(int newColumns);
     void acceptColors(int a, int j);
+    Figure* getRandomShape();
 
     ~Glass();
 
 signals:
  void signalChangePattern(Figure*);
  void setScore(int);
+
 
 public slots:
     void slotNewGame();

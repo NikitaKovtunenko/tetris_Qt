@@ -11,15 +11,21 @@ CONFIG += c++17
 SOURCES += \
     figure.cpp \
     glass.cpp \
+    ifigure.cpp \
+    lfigure.cpp \
     main.cpp \
     mainwindow.cpp \
-    nextfigure.cpp
+    nextfigure.cpp \
+    ofigure.cpp
 
 HEADERS += \
     figure.h \
     glass.h \
+    ifigure.h \
+    lfigure.h \
     mainwindow.h \
-    nextfigure.h
+    nextfigure.h \
+    ofigure.h
 
 FORMS += \
     mainwindow.ui
